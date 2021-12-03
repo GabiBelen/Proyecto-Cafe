@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-   <title>Cafetería - los mejores Cafe times</title>
-<!-- <style>
-  body {
-    background: cadetblue;
-  }
-</style> -->
+  <meta charset="utf-8" />
+  <title>Cafeteria - los mejores Cafe times</title>
+  <!-- <style>
+    body {
+      background: lightblue;
+    }
+  </style> -->
 
-<link rel="preconnect" href="https://fonts.googleapis.com ">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Allerta&family=Montserrat:wght@400;700&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allerta&family=Montserrat&family=Pacifico:wght@400;700&display=swap" rel="stylesheet">
 
-
-<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <!-- header
-  estilos en linea -> <header style="background: brown;"></header> -->
+  <!-- header -->
+  <!-- estilos en linea <header style="background: brown;"></header> -->
+
 
   <section id="portada" class="portada">
     <!-- portada -->
     <header id="header" class="header contenedor">
+
       <figure class="logotipo">
-        <img src="img/logo.png" width="60" alt="logo cafe"/>
+        <!-- logotipo -->
+        <!-- <img src="img/logo.png" width="60" alt="logo cafe" /> -->
+        <span>CafeTime</span>
       </figure>
 
       <nav class="menu">
-<!-- menu -->
-<!-- ul es una lista desordenada
-ol es una lista desordenada -->
-<ul>
-  <li><a href="index.html">Inicio</a></li>
-  <li><a href="#cafes">Cafés</a></li>
-  <li><a href="precios.html">Precios</a></li>
-</ul>
+        <!-- menu -->
+        <!-- ul es una lista desordenada -->
+        <!-- ol es una lista ordenada -->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#cafes">Cafes</a></li>
+          <li><a href="precios.html">Precios</a></li>
+        </ul>
       </nav>
+  
 
     </header>
 
@@ -46,7 +50,8 @@ ol es una lista desordenada -->
       <!-- titulo -->
       <h3 class="title-a">El mejor café intenso para momentos especiales</h3>
       <!-- boton -->
-      <button>Conoce más</button>
+      <!-- <button class="button">Conoce más</button> -->
+      <a class="button" href="#cafes">Conoce más</a>
     </div>
 
   </section>
@@ -56,6 +61,7 @@ ol es una lista desordenada -->
   <h2>Nuestros cafés</h2>    <!-- titulo -->
 
   <article class="cafe granoscafe">
+    <!-- cafes 1 -->
     <img class="right" src="img/cafetime.png" width="350" alt="cafe expresso">
 
     <div class="contenedor-cafe-a">
@@ -106,38 +112,38 @@ ol es una lista desordenada -->
   <form class="formulario">
     <div class="col1">
       
-    <label>Nombre</label>
-    <input type="text" id="Nombre" />     <!-- espacio blanco para escribir -->
+    <label for="nombre">Nombre</label>
+    <input type="text" id="Nombre" required name="nombre"/>     <!-- espacio blanco para escribir -->
 
     <label for="email">Correo electrónico </label>
-    <input type="email" />
+    <input type="email" id="email" name="email"/>
 
     <div class="generos">
       <label for="mujer">
-        <input type="radio" id="mujer"> Mujer
+        <input type="radio" id="mujer" name="genero" value="mujer" required> Mujer
       </label>
 
       <label>
-        <input type="radio"> Hombre
+        <input type="radio" id="hombre" name="genero" value="hombre" required> Hombre
       </label>
 
     </div>
 
     <div class="intereses">
       <label for="cotizacion">
-        <input type="checkbox" id="cotizacion"> Cotización
+        <input type="checkbox" id="cotizacion" name="intereses" value="cotizacion"> Cotización
       </label>
 
       <label for="reclamos">
-        <input type="checkbox" id="reclamos"> Reclamos
+        <input type="checkbox" id="reclamos" name="intereses" value="reclamos"> Reclamos
       </label>
 
       <label for="observaciones">
-        <input type="checkbox" id="observaciones"> observaciones
+        <input type="checkbox" id="observaciones" name="intereses" value="observaciones"> Observaciones
       </label>
 
       <label for="otros">
-        <input type="checkbox" id="otros"> Otros
+        <input type="checkbox" id="otros" name="intereses" value="otros"> Otros
       </label>
     </div>
 
@@ -146,14 +152,9 @@ ol es una lista desordenada -->
 
     <div class="col2">
       
-    <div>
       <label for="comentarios"> Comentarios</label>
       <textarea name="" id="comentarios" cols="30" rows="7"></textarea>
-      <input type="submit" value="Enviar">
-
-
-    </div>
-
+      <input class="button" type="submit" value="Enviar">
 
 
     </div>
